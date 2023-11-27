@@ -1,0 +1,50 @@
+<!-- usuario.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ingreso al Sistema
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="text-center">
+          <h1>Bienvenido Alumno</h1>
+        </div>
+
+        <!-- Formulario de Inicio de Sesión -->
+        <form>
+          <div class="form-group">
+            <label for="nombreUsuario">Nombre de Usuario</label>
+            <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="usuario.nombreUsuario" (input)="onInputChange()">
+          </div>
+
+          <div class="form-group">
+            <label for="contrasena">Contraseña</label>
+            <input type="password" class="form-control" id="contrasena" name="contrasena" [(ngModel)]="usuario.contrasena" (input)="onInputChange()">
+          </div>
+
+          <div class="text-center">          
+            <!-- usuario.page.html -->
+            <ion-button color="success" routerLink="/sistema" [disabled]="!isFormValid">Ingresar</ion-button>
+            
+          </div>
+
+          <!-- Botón Restablecer Contraseña -->
+          <div class="text-center mt-3">
+            <ion-button color="warning" (click)="abrirModalRecuperarContrasena()">Restablecer Contraseña</ion-button>
+          </div>
+                    
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+  
+   
+</ion-content>

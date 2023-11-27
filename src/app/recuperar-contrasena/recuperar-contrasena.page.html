@@ -1,0 +1,28 @@
+<!-- recuperar-contraseña.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recuperar Contraseña</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+ </ion-header>
+ 
+ <ion-content class="ion-padding">
+  <!-- Contenido del modal para recuperar la contraseña -->
+  <p>Ingrese su nombre de usuario y presione "RECUPERAR".</p>
+ 
+  <!-- Campos para el nombre de usuario -->
+  <ion-item>
+    <ion-label position="floating">Nombre de Usuario</ion-label>
+    <ion-input [(ngModel)]="nombreUsuario" type="text" required #nombreUsuarioInput="ngModel"></ion-input>
+    <ion-label *ngIf="nombreUsuarioInput.invalid && (nombreUsuarioInput.dirty || nombreUsuarioInput.touched)" color="danger">
+      Ingresar usuario.
+    </ion-label>
+  </ion-item>
+ 
+  <!-- Botón de recuperación -->
+  <ion-button expand="full" (click)="recuperarContrasena()" [disabled]="nombreUsuarioInput.invalid">RECUPERAR</ion-button>
+ </ion-content>
+ 

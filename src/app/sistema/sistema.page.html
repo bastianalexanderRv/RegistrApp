@@ -1,0 +1,57 @@
+<!-- sistema.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      RegistrAPP
+    </ion-title>
+  </ion-toolbar>
+ </ion-header>
+ 
+ <ion-content class="ion-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="text-center">
+          <h1>Registro de Clase</h1>
+        </div>
+ 
+        <!-- Sección para obtener latitud y longitud -->
+        <div class="geolocation-section">
+          <h2>Ubicación</h2>
+          <ion-button (click)="obtenerUbicacion()">Obtener Ubicación</ion-button>
+          <p>Latitud: {{ latitud }}</p>
+          <p>Longitud: {{ longitud }}</p>        
+        </div>
+ 
+        <!-- Sección para la selfie -->
+        <div class="camera-section">
+          <h2>Selfie</h2>
+          <ion-button (click)="tomarSelfie()">Tomar Selfie</ion-button>
+          <ion-img [src]="imagenSelfie" *ngIf="imagenSelfie"></ion-img>
+        </div>
+ 
+        <!-- Sección para el registro de asistencia -->
+        <div class="attendance-section">
+          <h2>Registro de Asistencia</h2>
+          <form>
+            <div class="form-group">
+              <label for="fechaAsistencia">Fecha de Asistencia</label>
+              <input type="date" class="form-control" id="fechaAsistencia" name="fechaAsistencia" [(ngModel)]="asistencia.fecha" required>
+            </div>
+ 
+            <div class="form-group">
+              <label for="horaAsistencia">Hora de Asistencia</label>
+              <input type="time" class="form-control" id="horaAsistencia" name="horaAsistencia" [(ngModel)]="asistencia.hora" required>
+            </div>
+ 
+            <div class="text-center">        
+              <ion-button color="success" (click)="registrarAsistencia(); presentAlert()">Registrar Asistencia</ion-button>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+ </ion-content>
+ 

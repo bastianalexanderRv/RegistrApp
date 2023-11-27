@@ -1,0 +1,134 @@
+ion-header {
+    --background: #30c58c; // color de fondo de la barra de herramientas
+    --color: #ffffff; // color de texto de la barra de herramientas
+   }
+   
+   ion-toolbar {
+    --background: #079760; // color de fondo de la barra de herramientas
+    --color: #ffffff; // color de texto de la barra de herramientas
+   }
+   
+   ion-title {
+    --color: #ffffff; // color de texto del título
+   }
+   
+   .text-center {
+    text-align: center; // Centra el texto horizontalmente
+    color: #ffffff; // Color de texto claro
+    font-size: 2em; // Tamaño de fuente
+    font-weight: bold; // Peso de fuente en negrita
+    margin-top: 20px; // Espacio arriba del texto
+   }
+   
+   .text-center h1 {
+    font-size: 3em; // Tamaño de fuente del encabezado
+   }
+   
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(11, 196, 209, 0.5); /* un cuadrado transparente */
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff; // color de texto claro
+  }
+  
+  .form-group input {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ffffff; // color de texto claro
+    background-color: #0e0101;
+    background-clip: padding-box;
+    border: 1px solid #007bff; // color de resaltado (azul marino)
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .btn-primary {
+    color: #ffffff; // color de texto claro
+    background-color: #007bff; // color de resaltado (azul marino)
+    border-color: #007bff; // color de resaltado (azul marino)
+  }
+  
+  .btn-warning {
+    color: #ffffff; // color de texto claro
+    background-color: #d2691e; // color secundario (mostaza)
+    border-color: #d2691e; // color secundario (mostaza)
+  }
+  
+  ion-content {
+    --background: url('/assets/sanjoaquin.jpg') 0 0/100% 100% no-repeat; // agregar la imagen de fondo aquí
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh; /* Asegúrate de que el contenedor tenga una altura */
+    text-align: center;
+    color: var(--text-color); // color de texto claro
+  }
+  
+  .container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.5); /* un cuadrado transparente */
+    padding: 60px; /* espacio alrededor de los elementos */
+    grid-auto-rows: minmax(100px, auto);
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .col-md-8 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  
